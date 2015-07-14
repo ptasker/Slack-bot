@@ -60,7 +60,7 @@ var bot = {
                 var line = (lines[Math.floor(Math.random() * lines.length)]);
 
                 botPayload = {
-                    text: 'Sup ' + userName + '. '+line
+                    text: 'Sup ' + userName + '. '+line + "  ¯\_(ツ)_/¯"
                 };
 
 
