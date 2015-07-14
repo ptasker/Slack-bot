@@ -24,7 +24,10 @@ var bot = {
                     "olive oil",
                     "butter",
                     "HTML/CSS",
-                    "the highest quality hairspray"
+                    "the highest quality hairspray",
+                    "magic",
+                    "fish oil",
+                    "jam"
 
                 ];
 
