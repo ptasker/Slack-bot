@@ -6,6 +6,8 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 var hellobot = require('./hellobot');
+var mikebot = require('./mikebot');
+
 
 
 // body parser middleware
@@ -15,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 
 app.post('/hello', hellobot);
+
+app.post('/mike', function(req, res){mikebot.getThing(req, res)});
 
 // error handler
 app.use(function (err, req, res, next) {
