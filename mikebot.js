@@ -17,7 +17,7 @@
     var thing = arrayOfThingsInMikesHair[Math.floor(Math.random()*arrayOfThingsInMikesHair.length)];
 
     var botPayload = {
-      text : 'Well, ' + userName + ', I\'m glad you asked. Mike puts ' + thing + ' in his hair'
+      text : 'Well, ' + userName + ', I\'m glad you asked. Mike puts ' + thing + ' in his hair.'
     };
 
   // avoid infinite loop

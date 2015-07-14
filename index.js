@@ -6,7 +6,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 var hellobot = require('./hellobot');
-var mikebot = require('./mikebot');
+var bot = require('./bot');
 
 
 
@@ -18,7 +18,7 @@ app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 
 app.post('/hello', hellobot);
 
-app.post('/mike', function(req, res){mikebot.getThing(req, res)});
+app.post('/bot', function(req, res){bot.handle(req, res)});
 
 // error handler
 app.use(function (err, req, res, next) {
