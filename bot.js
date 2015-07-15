@@ -27,7 +27,13 @@ var bot = {
                     "the highest quality hairspray",
                     "magic",
                     "fish oil",
-                    "jam"
+                    "jam",
+                    "walnuts",
+                    "Maryau's secret recipe",
+                    "ranch dressing",
+                    "Sum Yung Guy",
+                    "<who cares>",
+                    "<strong>SHUT UP MIKE</strong>"
 
                 ];
 
@@ -50,10 +56,8 @@ var bot = {
 
             case 'bot':
 
-
                 function func(data) {
                     console.log('Line: ' + data);
-
                 }
 
                 var path = 'lines.txt';
@@ -66,9 +70,7 @@ var bot = {
                     text: 'Sup ' + userName + '. '+line + "  ¯\_(ツ)_/¯"
                 };
 
-
                 break;
-
 
         }
 
