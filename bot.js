@@ -56,18 +56,35 @@ var bot = {
 
             case 'bot':
 
-                function func(data) {
-                    console.log('Line: ' + data);
-                }
+            function func(data) {
+                console.log('Line: ' + data);
+            }
 
-                var path = 'lines.txt';
+                var path = 'text/lines.txt';
 
                 var lines = fs.readFileSync(path).toString().split('\n');
 
                 var line = (lines[Math.floor(Math.random() * lines.length)]);
 
                 botPayload = {
-                    text: 'Sup ' + userName + '. '+line + "  ¯\_(ツ)_/¯"
+                    text: 'Sup ' + userName + '. ' + line + "  ¯|_(ツ)_/¯"
+                };
+
+                break;
+
+            case 'bloat':
+
+            function func(data) {
+                console.log('Line: ' + data);
+            }
+
+                path = 'text/questions.txt';
+
+                lines = fs.readFileSync(path).toString().split('\n');
+                line = (lines[Math.floor(Math.random() * lines.length)]);
+
+                botPayload = {
+                    text:'Hey ' + userName + '. Maryau question of the day: `' + line + "` - (╯°□°)╯︵ ┻━┻"
                 };
 
                 break;

@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var port = process.env.PORT || 3000;
 
-var hellobot = require('./hellobot');
+//var hellobot = require('./hellobot');
 var bot = require('./bot');
 
 
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // test route
 app.get('/', function (req, res) { res.status(200).send('Hello world!') });
 
-app.post('/hello', hellobot);
+//app.post('/hello', hellobot);
 
 app.post('/bot', function(req, res){bot.handle(req, res)});
 
