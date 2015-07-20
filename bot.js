@@ -79,7 +79,6 @@ var bot = {
             }
 
                 path = 'text/questions.txt';
-
                 lines = fs.readFileSync(path).toString().split('\n');
                 line = (lines[Math.floor(Math.random() * lines.length)]);
 
