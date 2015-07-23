@@ -17,42 +17,42 @@ var bot = {
 
             case 'mike':
 
-            var arrayOfThingsInMikesHair = [
+                var arrayOfThingsInMikesHair = [
 
-            "I dunno, crude oil?",
-            "nothin but crisco",
-            "olive oil",
-            "butter",
-            "HTML/CSS",
-            "the highest quality hairspray",
-            "magic",
-            "fish oil",
-            "jam",
-            "walnuts",
-            "Maryau's secret recipe",
-            "ranch dressing",
-            "Sum Yung Guy",
-            "<who cares>",
-            "<strong>SHUT UP MIKE</strong>"
+                    "I dunno, crude oil?",
+                    "nothin but crisco",
+                    "olive oil",
+                    "butter",
+                    "HTML/CSS",
+                    "the highest quality hairspray",
+                    "magic",
+                    "fish oil",
+                    "jam",
+                    "walnuts",
+                    "Maryau's secret recipe",
+                    "ranch dressing",
+                    "Sum Yung Guy",
+                    "<who cares>",
+                    "<strong>SHUT UP MIKE</strong>"
 
-            ];
+                ];
 
-            var thing = arrayOfThingsInMikesHair[Math.floor(Math.random() * arrayOfThingsInMikesHair.length)];
+                var thing = arrayOfThingsInMikesHair[Math.floor(Math.random() * arrayOfThingsInMikesHair.length)];
 
-            botPayload = {
-                text: 'Well, ' + userName + ', I\'m glad you asked. Mike puts ' + thing + ' in his hair.'
-            };
+                botPayload = {
+                    text: 'Well, ' + userName + ', I\'m glad you asked. Mike puts ' + thing + ' in his hair. ' + bot.pickEmoji()
+                };
 
-            break;
+                break;
 
             case 'hello':
 
-            botPayload = {
-                text: 'Hello ' + userName + '!'
-            };
+                botPayload = {
+                    text: 'Hello ' + userName + '!'
+                };
 
 
-            break;
+                break;
 
             case 'bot':
 
@@ -60,17 +60,17 @@ var bot = {
                 console.log('Line: ' + data);
             }
 
-            var path = 'text/lines.txt';
+                var path = 'text/lines.txt';
 
-            var lines = fs.readFileSync(path).toString().split('\n');
+                var lines = fs.readFileSync(path).toString().split('\n');
 
-            var line = (lines[Math.floor(Math.random() * lines.length)]);
+                var line = (lines[Math.floor(Math.random() * lines.length)]);
 
-            botPayload = {
-                text: 'Sup ' + userName + '. ' + line + "  ¯|_(ツ)_/¯"
-            };
+                botPayload = {
+                    text: 'Sup ' + userName + '. ' + line + "  ¯|_(ツ)_/¯"
+                };
 
-            break;
+                break;
 
             case 'bloat':
 
@@ -78,15 +78,15 @@ var bot = {
                 console.log('Line: ' + data);
             }
 
-            path = 'text/questions.txt';
-            lines = fs.readFileSync(path).toString().split('\n');
-            line = (lines[Math.floor(Math.random() * lines.length)]);
+                path = 'text/questions.txt';
+                lines = fs.readFileSync(path).toString().split('\n');
+                line = (lines[Math.floor(Math.random() * lines.length)]);
 
-            botPayload = {
-                text:'Hey ' + userName + '. Maryau question of the day: `' + line + "` - (╯°□°)╯︵ ┻━┻"
-            };
+                botPayload = {
+                    text: 'Hey ' + userName + '. Maryau question of the day: `' + line + "` - (╯°□°)╯︵ ┻━┻"
+                };
 
-            break;
+                break;
 
             case 'basically':
 
@@ -95,10 +95,10 @@ var bot = {
                 line = (lines[Math.floor(Math.random() * lines.length)]);
 
                 botPayload = {
-                    text:'Hey ' + userName + '. Pete say\'s: \'' + line + "\' :squirrel:"
+                    text: 'You wanna know what Pete say\'s? \'' + line + "\' " + bot.pickEmoji()
                 };
 
-            break;
+                break;
 
         }
 
@@ -111,7 +111,29 @@ var bot = {
         }
 
 
+    },
+
+    pickEmoji: function () {
+
+        var arr = [
+
+            ':squirrel:',
+            ':+1:',
+            ':skull:',
+            ':shit:',
+            ':penguin:',
+            ':zangief:'
+
+
+        ];
+
+        var line = (arr[Math.floor(Math.random() * arr.length)]);
+
+        return line;
+
+
     }
+
 
 }
 
