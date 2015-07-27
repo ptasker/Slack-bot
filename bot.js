@@ -31,7 +31,7 @@ var bot = {
                     "walnuts",
                     "Maryau's secret recipe",
                     "ranch dressing",
-                    "Sum Yung Guy",
+                    "Cream of Sum Yung Guy",
                     "<who cares>",
                     "<strong>SHUT UP MIKE</strong>"
 
