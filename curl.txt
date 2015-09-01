@@ -1,1 +1,1 @@
-curl -X POST --data "user_name=foobar&channel_id=C0123ABCD&text=basically&trigger_word=basically" http://localhost:3000/bot
+curl -X POST --data "user_name=foobar&channel_id=C0123ABCD&text=shutit&trigger_word=shutit" http://localhost:3000/bot
