@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var bot = {
 
-    handle: function (req, res, next) {
+    handle: function(req, res, next) {
 
         var userName = req.body.user_name;
 
@@ -56,9 +56,9 @@ var bot = {
 
             case 'bot':
 
-            function func(data) {
-                console.log('Line: ' + data);
-            }
+                function func(data) {
+                    console.log('Line: ' + data);
+                }
 
                 var path = 'text/lines.txt';
 
@@ -74,9 +74,9 @@ var bot = {
 
             case 'bloat':
 
-            function func(data) {
-                console.log('Line: ' + data);
-            }
+                function func(data) {
+                    console.log('Line: ' + data);
+                }
 
                 path = 'text/questions.txt';
                 lines = fs.readFileSync(path).toString().split('\n');
@@ -100,6 +100,19 @@ var bot = {
 
                 break;
 
+            case 'shutit':
+            case 'shut up pete':
+
+                path = 'text/shutitpete.txt';
+                lines = fs.readFileSync(path).toString().split('\n');
+                line = (lines[Math.floor(Math.random() * lines.length)]);
+
+                botPayload = {
+                    text: line
+                };
+
+                break;
+
         }
 
 
@@ -113,7 +126,7 @@ var bot = {
 
     },
 
-    pickEmoji: function () {
+    pickEmoji: function() {
 
         var arr = [
 
