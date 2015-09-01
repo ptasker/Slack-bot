@@ -108,7 +108,8 @@ var bot = {
                 line = (lines[Math.floor(Math.random() * lines.length)]);
 
                 botPayload = {
-                    text: line
+                    text: line,
+                    image_url: line
                 };
 
                 break;
