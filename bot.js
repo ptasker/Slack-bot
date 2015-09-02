@@ -32,6 +32,7 @@ var bot = {
                     "Maryau's secret recipe",
                     "ranch dressing",
                     "Cream of Sum Yung Guy",
+                    "groin butter",
                     "<who cares>",
                     "<strong>SHUT UP MIKE</strong>"
 
@@ -83,7 +84,7 @@ var bot = {
                 line = (lines[Math.floor(Math.random() * lines.length)]);
 
                 botPayload = {
-                    text: 'Hey ' + userName + '. Maryau question of the day: `' + line + "` - (╯°□°)╯︵ ┻━┻"
+                    text: 'Hey ' + userName + '. Maryau quote of the day: `' + line + "` - (╯°□°)╯︵ ┻━┻"
                 };
 
                 break;
