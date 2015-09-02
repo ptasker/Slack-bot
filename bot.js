@@ -32,6 +32,7 @@ var bot = {
                     "Maryau's secret recipe",
                     "ranch dressing",
                     "Cream of Sum Yung Guy",
+                    "a steaming coiler",
                     "groin butter",
                     "<who cares>",
                     "<strong>SHUT UP MIKE</strong>"
