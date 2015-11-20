@@ -1,15 +1,27 @@
 var reader = require('./readlines.js');
 var fs = require('fs');
 
+/**
+ *
+ *
+ * https://invulnerable-croissant-1819.herokuapp.com/bot
+ *
+ * hello, mike, bot, bloat, basically, shutit, shut up pete
+ *
+ * @type {{handle: bot.handle, pickEmoji: bot.pickEmoji}}
+ */
+
 var bot = {
 
     handle: function(req, res, next) {
 
         var userName = req.body.user_name;
 
-        var triggerWord = req.body.trigger_word;
-
+        var triggerWord = req.body.text;
+        var command  = req.body.command;
+        
         var botPayload = {
+            response_type: "in_channel",
             text: 'Hello ' + userName + '!'
         };
 
@@ -41,9 +53,7 @@ var bot = {
 
                 var thing = arrayOfThingsInMikesHair[Math.floor(Math.random() * arrayOfThingsInMikesHair.length)];
 
-                botPayload = {
-                    text: 'Well, ' + userName + ', I\'m glad you asked. Mike puts ' + thing + ' in his hair. ' + bot.pickEmoji()
-                };
+                botPayload.text = 'Well, ' + userName + ', I\'m glad you asked. Mike puts ' + thing + ' in his hair. ' + bot.pickEmoji();
 
                 break;
 
