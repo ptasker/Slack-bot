@@ -6,19 +6,15 @@ var bot = {
     handle: function(req, res, next) {
 
         var userName = req.body.user_name;
-
         var triggerWord = req.body.trigger_word;
 
         var botPayload = {
             text: 'Hello ' + userName + '!'
         };
-
+        
         switch (triggerWord) {
-
             case 'mike':
-
                 var arrayOfThingsInMikesHair = [
-
                     "I dunno, crude oil?",
                     "nothin but crisco",
                     "olive oil",
@@ -30,12 +26,7 @@ var bot = {
                     "jam",
                     "walnuts",
                     "Maryau's secret recipe",
-                    "ranch dressing",
-                    "Cream of Sum Yung Guy",
-                    "a steaming coiler",
-                    "groin butter",
-                    "<who cares>",
-                    "<strong>SHUT UP MIKE</strong>"
+                    "ranch dressing"
 
                 ];
 
@@ -115,9 +106,7 @@ var bot = {
                 };
 
                 break;
-
         }
-
 
         // avoid infinite loop
         if (userName !== 'slackbot') {
@@ -130,28 +119,17 @@ var bot = {
     },
 
     pickEmoji: function() {
-
         var arr = [
-
             ':squirrel:',
             ':+1:',
             ':skull:',
             ':shit:',
             ':penguin:',
             ':zangief:'
-
-
         ];
 
         var line = (arr[Math.floor(Math.random() * arr.length)]);
-
         return line;
-
-
     }
-
-
 }
-
-
 module.exports = bot;
