@@ -19,7 +19,7 @@ var bot = {
 
         var triggerWord = req.body.text;
         var command  = req.body.command;
-        
+
         var botPayload = {
             response_type: "in_channel",
             text: 'Hello ' + userName + '!'
